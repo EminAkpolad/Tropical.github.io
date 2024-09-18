@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Edu+VIC+WA+NT+Beginner:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Matemasie&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --renk1: #98DFAF;
+    --renk2: #5FB49C;
+    --renk3: #DEEFB7;
+    --renk4: #776D5A;
+    --renk5: black;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.sosyal-medya ul {
+    display: flex;
+}
+
+.sosyal-medya ul li {
+    margin: 10px;
+}
+
+.sosyal-medya ul li a {
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--renk2);
+    color: var(--renk3);
+    transition: all .4s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sosyal-medya ul li a i {
+    transition: all .4s;
+}
+
+.sosyal-medya ul li a:hover i {
+    filter: drop-shadow(16px 16px 20px blue) invert(25%);
+}
+
+header {
+    background-color: var(--renk1) !important;
+    font-family: "Matemasie", sans-serif !important;
+}
+
+.nav-link {
+    margin: 10px;
+    background-color: var(--renk2);
+    color: var(--renk3);
+    border-radius: 32px;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: var(--renk3);
+    color: var(--renk2);
+}
+
+.logo-baslik {
+    font-size: 30px;
+    filter: drop-shadow(16px 16px 20px blue) invert(25%);
+}
+
+.AnaBolum {
+    margin-top: 0%;
+    padding: 15% 23%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--renk3);
+    font-family: "Oswald", sans-serif !important;
+}
+
+.anabolum-img .img-1 {
+    width: 15%;
+    position: absolute;
+    z-index: 0;
+    right: 28%;
+    top: 32%;
+    border-radius: 5px;
+}
+
+.anabolum-img .img-2 {
+    width: 20%;
+    position: absolute;
+    z-index: 1;
+    right: 12%;
+    bottom: 1%;
+    border-radius: 5px;
+}
+
+.Baslik h1 {
+    color: var(--renk2);
+    font-size: 48px;
+    letter-spacing: 1.6px;
+    line-height: 86px;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+}
+
+.Baslik p {
+    font-size: 25px;
+    color: var(--renk5);
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    animation:
+        typewriter 4s steps(50, end),
+        blinkTextCursor 0.75s step-end infinite;
+}
+
+.hakkimizda{
+    font-family: "Oswald", sans-serif !important;
+}
+
+.hakkimizda-icerik h1 {
+    color: var(--renk2);
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.hakkimizda-icerik p{
+    color: var(--renk4);
+}
+
+.hakkimizda-resim img{
+    box-shadow: 15px 20px 15px var(--renk2); 
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.hakkimizda-resim{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .4s !important;
+}
+
+.hakkimizda-resim::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 96%;
+    transform: scale(0);
+    background-color: var(--renk2);
+    opacity: 0;
+    z-index: 1;
+    transition: all .4s;
+    border-radius: 4px;
+}
+
+.hakkimizda-resim:hover::before{
+    opacity: 0.9;
+    transform: scale(1);
+}
+
+.hakkimizda-resim a {
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    display: none;
+    transition: all .4s;
+    color: white;
+    font-size: 25px;
+    z-index: 10;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+}
+.hakkimizda-resim:hover a{
+    display: block;
+}
+
+.button{
+    position: relative;
+    background-color: var(--renk2);
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 25%;
+    height: 42px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    z-index: 1;
+    font-family: "Oswald", sans-serif;
+}
+
+.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+    width: 0;
+    background-color: black;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50%;
+    width: 0;
+    background-color: black;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.button:hover::before{
+    width: 100%;
+}
+
+.button:hover::after{
+    width: 100%;
+}
+
+
+.urun-resim img{
+    width: 60%;
+}
+
+
+.urun-resim{
+    position: relative;
+}
+
+.urun-kutu{
+    position: relative;
+    text-align: center;
+}
+
+.icindekiler-effect{
+    position: relative;
+    top: -89px;
+    opacity: 0;
+    left: 0;
+    transition: all .4s;
+    z-index: 10;
+}
+
+.urun-kutu:hover .icindekiler-effect{
+    top: -250px;
+    opacity: 1;
+}
+
+
+.urun-resim{
+    position: relative;
+}
+
+.urun-resim img{
+    cursor: pointer !important;
+}
+
+.urun-resim::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 82px;
+    height: 410px;
+    width: 250px;
+    background-color: black;
+    opacity: 0;
+    transition: all .4s;
+}
+
+.urun-icerik p{
+    color: white;
+    font-family: "Oswald", sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+}
+
+.urun-resim:hover::before{
+    opacity: 0.7;
+}
+
+.urunler{
+    background-color: var(--renk1);
+    padding: 15%;
+}
+
+.SayfaBaslik h3{
+    text-align: center;
+    font-family: "Oswald", sans-serif !important;
+    color: var(--renk5);
+    font-size: 42px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+.musteri-foto img {
+    width: 55%;
+    border-radius: 50%;
+}
+
+.Myorumlari{
+    background-color: var(--renk3);
+}
+
+.yorum{
+    display: flex;
+}
+
+.Musteri-yorumu{
+    display: flex;
+}
+
+.puan a{
+    text-decoration: none;
+    color: orange;
+}
+
+.musteri-yorumu{
+    position: relative;
+    right: 25%;
+}
+
+
+.musteri-foto p{
+    color: var(--renk2);
+    font-size: 26px;
+    font-family: "Oswald", sans-serif !important;
+    position: relative;
+    left: 17%;
+    top: 10px;
+    font-weight: 600;
+}
+
+.galeri-img img{
+    position: relative;
+    width: 74%;
+}
+
+.galeri-img{
+    cursor: pointer;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.icerik {
+    background-color: var(--renk2) !important;
+    color: white;
+    padding: 10px;
+    width: 74%;
+    position: absolute;
+    transition: all .4s;
+    z-index: 10 !important;
+    transform: translateY(10px);
+}
+
+
+.galeri-img:hover .icerik{
+    transform: translateY(-70px);
+}
